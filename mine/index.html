@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Paulo Pinto - Developer</title>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- get bootstrap -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+			crossorigin="anonymous"
+		/>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+			crossorigin="anonymous"
+		></script>
+
+		<!-- jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+		<script>
+			function clipboardEmail() {
+				// get email
+				var email = document.getElementById('email').text;
+				// add to clipboard
+				navigator.clipboard.writeText(email);
+				alert('email copied'); // TODO - add some effect
+			}
+
+			function getEventTarget(e) {
+				e = e || window.event;
+				return e.target || e.srcElement;
+			}
+
+			function updateActiveListItem() {
+				var ul = document.getElementById('navbarNav');
+
+				// get all links in unordered list
+				var links = ul.querySelectorAll('li > a');
+				links.forEach((l) => {
+					// remove active
+					l.className = 'nav-link';
+				});
+
+				// add active class to selected item
+				ul.onclick = function (event) {
+					var target = getEventTarget(event);
+					target.className += ' custom-active';
+				};
+			}
+
+			function toggleDropdown(n) {
+				$('#info' + n).toggleClass('d-none');
+			}
+		</script>
+
+		<style>
+			/* TODO - change to responsive */
+			* {
+				scroll-margin-top: 70px;
+			}
+
+			.custom-active {
+				font-weight: 600;
+				color: #4285f4;
+			}
+
+			.text-justify {
+				text-align: justify;
+			}
+			/* https://mdbootstrap.com/docs/standard/tools/design/gradients/ */
+			.gradient-custom {
+				/* fallback for old browsers */
+				background: #fbc2eb;
+
+				/* Chrome 10-25, Safari 5.1-6 */
+				background: -webkit-linear-gradient(
+					to top left,
+					rgba(248, 169, 226, 0.4),
+					rgba(148, 184, 247, 0.6)
+				);
+
+				/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+				background: linear-gradient(
+					to top left,
+					rgba(248, 169, 226, 0.4),
+					rgba(148, 184, 247, 0.6)
+				);
+			}
+
+			.bg-custom-white {
+				background: rgba(255, 255, 255, 0.151);
+			}
+			.bg-custom-black {
+				background: rgba(0, 0, 0, 0.185);
+			}
+		</style>
+	</head>
+
+	<body class="gradient-custom">
+		<!-- TODO :
+		profile pic
+		header needs style, close auto when paragraph is clicked on mobile
+		add ScrollSpy
+		change scroll to paragraph to responsive (px -> em)
+		add linkedin icon (fix fontawesome) / footer
+		add CV
+		background with 3js
+		add roboto-mono font
+		-->
+
+		<!-- header -->
+		<nav class="navbar navbar-expand-md bg-light sticky-top">
+			<div class="container-fluid">
+				<a class="navbar-brand text-primary">Paulo Pinto - Developer</a>
+				<!-- toggle -->
+				<!-- TODO : Close this toggle when clicked on mobile -->
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+					aria-controls="navbarNav"
+					aria-expanded="false"
+					aria-label="Toggle navigation"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul
+						id="navbarEles"
+						class="navbar-nav"
+						onclick="updateActiveListItem()"
+					>
+						<li class="nav-item">
+							<a class="nav-link" aria-current="page" href="#"
+								>Start</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#about">About me</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#projects">Projects</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#experience"
+								>Experience</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#education">Education</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#contact">Contact me</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Me -->
+		<div class="d-flex justify-content-center pt-4">
+			<div class="border border-2 border-warning rounded-3 w-75">
+				<div>
+					<h1>Paulo Pinto (he/him)</h1>
+					<h3>
+						A Developer looking for new opportunities to perfect his
+						craft
+					</h3>
+				</div>
+				<img src="img/m6.png" class="w-25" />
+			</div>
+		</div>
+
+		<!-- About -->
+		<div class="d-flex justify-content-center pt-4">
+			<section id="about" class="w-75">
+				<div>
+					<h1>👨‍💻 About Me</h1>
+					<!-- <p class="lead text-danger">Developer</p> -->
+					<p>
+						Born and raised in Portugal, I am a software developer
+						<u>looking for new opportunities abroad</u> to further
+						develop my craft. Python, Data Structures and version
+						control are the areas that I'm interested in the most,
+						so it's no secret that few things get me as excited as
+						solving a coding puzzle and uploading my solve to my
+						<a href="https://github.com/Paulo-Pinto"
+							>github account</a
+						>. Outside the tech sphere I'm mobilized in the wide
+						social movement, helping bring awareness to struggles
+						like climate change and LGBT+ rights.
+					</p>
+				</div>
+			</section>
+		</div>
+
+		<!-- TODO - test text-center -->
+		<!-- Projects -->
+		<div id="projects" class="d-flex justify-content-center pt-4">
+			<div class="w-75">
+				<h1>💾 Projects</h1>
+				<p class="lead">
+					I'm proud of these projects, they were extremely valuable to
+					flourish my learning mindset
+				</p>
+
+				<div class="d-flex">
+					<div
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+					>
+						<h4>☄ Project 1</h4>
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis
+							nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit
+						</p>
+
+						<p class="text-center">
+							<button
+								onclick="toggleDropdown(1)"
+								type="button"
+								class="btn btn-info"
+							>
+								+ Info
+							</button>
+						</p>
+
+						<div id="info1" class="d-none">INFO 1</div>
+					</div>
+
+					<div
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+					>
+						<h4>🎆 Project 2</h4>
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis
+							nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit
+						</p>
+
+						<p class="text-center">
+							<button
+								onclick="toggleDropdown(2)"
+								type="button"
+								class="btn btn-info"
+							>
+								+ info
+							</button>
+						</p>
+
+						<div id="info2" class="d-none">INFO 2</div>
+					</div>
+
+					<div
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+					>
+						<h4>🐍 Project 3</h4>
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis
+							nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit
+						</p>
+
+						<p class="text-center">
+							<button
+								onclick="toggleDropdown(3)"
+								type="button"
+								class="btn btn-info"
+							>
+								+ info
+							</button>
+						</p>
+
+						<div id="info3" class="d-none">INFO 3</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Experience -->
+		<div id="experience" class="d-flex justify-content-center pt-4">
+			<div class="w-75">
+				<h1>🎐 Experience</h1>
+				<p class="lead">
+					I have participated in three internships during my academic
+					endeavours
+				</p>
+
+				<div class="d-flex">
+					<div
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+					>
+						<h4>👩‍⚕️ Hospital Garcia de Orta - Helpdesk</h4>
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis
+							nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit
+						</p>
+
+						<p class="text-center">
+							<button
+								onclick="toggleDropdown(4)"
+								type="button"
+								class="btn btn-info"
+							>
+								+ Info
+							</button>
+						</p>
+
+						<div id="info4" class="d-none">INFO 4</div>
+					</div>
+
+					<div
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+					>
+						<h4>☘ Mobility Genie - Web Developer</h4>
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis
+							nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit
+						</p>
+
+						<p class="text-center">
+							<button
+								onclick="toggleDropdown(5)"
+								type="button"
+								class="btn btn-info"
+							>
+								+ info
+							</button>
+						</p>
+
+						<div id="info5" class="d-none">INFO 5</div>
+					</div>
+
+					<div
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+					>
+						<h4>
+							📺 Chipstorm - Computer Technician + Web Developer
+						</h4>
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis
+							nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit
+						</p>
+
+						<p class="text-center">
+							<button
+								onclick="toggleDropdown(6)"
+								type="button"
+								class="btn btn-info"
+							>
+								+ info
+							</button>
+						</p>
+
+						<div id="info6" class="d-none">INFO 6</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Education -->
+		<div id="education" class="d-flex justify-content-center pt-4">
+			<div class="w-75">
+				<h1>🎓 Education</h1>
+				<p class="lead">
+					I have a Bachelor's Degree and Vocational Training in the IT
+					domain
+				</p>
+
+				<div class="d-flex">
+					<div
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+					>
+						<h4>
+							👨‍🔬 Software Engineering Bachelor's Degree - EQF 6
+						</h4>
+						<p class="text-lead">ULHT in Lisboa - 19/22</p>
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis
+							nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit
+						</p>
+
+						<p class="text-center">
+							<button
+								onclick="toggleDropdown(7)"
+								type="button"
+								class="btn btn-info"
+							>
+								+ Info
+							</button>
+						</p>
+
+						<div id="info7" class="d-none">INFO 7</div>
+					</div>
+
+					<div
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+					>
+						<h4>
+							👨‍🏭 Information Systems Programming and Management
+							Technician - EQF 4
+						</h4>
+						<p class="text-lead">
+							Escola Digital in Lisboa - 16/19
+						</p>
+						<p class="text-justify">
+							Lorem ipsum dolor sit amet, consectetur adipiscing
+							elit, sed do eiusmod tempor incididunt ut labore et
+							dolore magna aliqua. Ut enim ad minim veniam, quis
+							nostrud exercitation ullamco laboris nisi ut aliquip
+							ex ea commodo consequat. Duis aute irure dolor in
+							reprehenderit
+						</p>
+
+						<p class="text-center">
+							<button
+								onclick="toggleDropdown(8)"
+								type="button"
+								class="btn btn-info"
+							>
+								+ info
+							</button>
+						</p>
+
+						<div id="info8" class="d-none">INFO 8</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h1 class="text-center pt-4 mb-0">📬 Contact me</h1>
+
+		<!-- Contact -->
+		<div class="d-flex justify-content-center text-center pt-4 pb-4">
+			<div id="contact">
+				<p>
+					Looking for a motivated developer? Get in touch with me at
+					<a id="email" href="mailto:paulopintodigital@gmail.com"
+						>paulopintodigital@gmail.com</a
+					>
+				</p>
+
+				<button onclick="clipboardEmail()" class="btn btn-primary">
+					Copy email to Clipboard!
+				</button>
+
+				<!-- TODO : supposedly fontawesome comes with bootstrap. investigate -->
+				<a href="https://www.linkedin.com/in/paulo-pinto-259838182/"
+					>LINKedin<i class="fab linkedin"></i
+				></a>
+			</div>
+		</div>
+
+		<!-- <div>Footer</div> -->
+	</body>
+</html>
