@@ -64,14 +64,16 @@
 				scroll-margin-top: 69px;
 			}
 
-			.custom-active {
+			.active {
 				font-weight: 600;
 				color: #4285f4;
+				text-decoration: #8ddfee70 wavy underline;
 			}
 
 			.text-justify {
 				text-align: justify;
 			}
+
 			/* https://mdbootstrap.com/docs/standard/tools/design/gradients/ */
 			.gradient-custom {
 				/* fallback for old browsers */
@@ -98,14 +100,17 @@
 			.bg-custom-black {
 				background: rgba(0, 0, 0, 0.185);
 			}
+
+			.flex-even {
+				flex: 1;
+			}
 		</style>
 	</head>
 
-	<body class="gradient-custom">
+	<body data-bs-spy="scroll" data-bs-target="#navbar" class="gradient-custom">
 		<!-- TODO :
 		profile pic
 		header needs style, close auto when paragraph is clicked on mobile
-		add ScrollSpy
 		change scroll to paragraph to responsive (px -> em)
 
 		orientação vertical para cards em mobile
@@ -115,9 +120,8 @@
 		background with 3js
 		add roboto-mono font
 		-->
-
 		<!-- header -->
-		<nav class="navbar navbar-expand-md bg-light sticky-top">
+		<nav id="navbar" class="navbar navbar-expand-md bg-light sticky-top">
 			<div class="container-fluid">
 				<a class="navbar-brand text-primary">Paulo Pinto - Developer</a>
 				<!-- toggle -->
@@ -141,11 +145,6 @@
 						onclick="updateActiveListItem()"
 					>
 						<li class="nav-item">
-							<a class="nav-link" aria-current="page" href="#"
-								>Start</a
-							>
-						</li>
-						<li class="nav-item">
 							<a class="nav-link" href="#about">About me</a>
 						</li>
 						<li class="nav-item">
@@ -168,7 +167,7 @@
 		</nav>
 
 		<!-- Me -->
-		<div class="d-flex justify-content-center pt-4">
+		<div class="d-flex justify-content-center py-4">
 			<div class="border border-2 border-warning rounded-3 w-75">
 				<div>
 					<h1>Paulo Pinto (he/him)</h1>
@@ -182,7 +181,7 @@
 		</div>
 
 		<!-- About -->
-		<div class="d-flex justify-content-center pt-4">
+		<div class="d-flex justify-content-center py-4">
 			<section id="about" class="w-75">
 				<div>
 					<h1>👨‍💻 About Me</h1>
@@ -206,7 +205,7 @@
 
 		<!-- TODO - test text-center -->
 		<!-- Projects -->
-		<div id="projects" class="d-flex justify-content-center pt-4">
+		<div id="projects" class="d-flex justify-content-center py-4">
 			<div class="w-75">
 				<h1>💾 Projects</h1>
 				<p class="lead">
@@ -297,7 +296,7 @@
 		</div>
 
 		<!-- Experience -->
-		<div id="experience" class="d-flex justify-content-center pt-4">
+		<div id="experience" class="d-flex justify-content-center py-4">
 			<div class="w-75">
 				<h1>🎐 Experience</h1>
 				<p class="lead">
@@ -307,7 +306,7 @@
 
 				<div class="d-flex">
 					<div
-						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
 					>
 						<h4>👩‍⚕️ Hospital Garcia de Orta - Helpdesk</h4>
 						<p class="text-justify">
@@ -335,7 +334,7 @@
 					</div>
 
 					<div
-						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
 					>
 						<h4>☘ Mobility Genie - Web Developer</h4>
 						<p class="text-justify">
@@ -362,7 +361,7 @@
 					</div>
 
 					<div
-						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
 					>
 						<h4>
 							📺 Chipstorm - Computer Technician + Web Developer
@@ -370,10 +369,9 @@
 						<p class="text-justify">
 							From Jan/18 to Feb/18, I aided in computer repair
 							services in Chipstorm while developing a rudimentary
-							log-in web app. Some of these services were:
-							Performing Diagnostics and Repair; Replacing Damaged
-							components; Installing Software; Formatting
-							Computers; Costumer Service; Work Order Management
+							log-in web app. I also got to experience Costumer
+							Service for the first time, making this a big
+							learning experience.
 						</p>
 						<!-- TODO passar estes pontos para o info ? -->
 						<p class="text-center">
@@ -386,14 +384,23 @@
 							</button>
 						</p>
 
-						<div id="info6" class="d-none">INFO 6</div>
+						<div id="info6" class="d-none">
+							<ul>
+								<li>Work Order Management</li>
+								<li>Costumer Service</li>
+								<li>Installing Software</li>
+								<li>Replacing Damaged components</li>
+								<li>Performing Diagnostics and Repair</li>
+								<li>Formatting Computers</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<!-- Education -->
-		<div id="education" class="d-flex justify-content-center pt-4">
+		<div id="education" class="d-flex justify-content-center py-4">
 			<div class="w-75">
 				<h1>🎓 Education</h1>
 				<p class="lead">
@@ -469,10 +476,10 @@
 			</div>
 		</div>
 
-		<h1 class="text-center pt-4 mb-0">📬 Contact me</h1>
+		<h1 class="text-center pt-5 mb-0">📬 Contact me</h1>
 
 		<!-- Contact -->
-		<div class="d-flex justify-content-center text-center pt-4 pb-4">
+		<div class="d-flex justify-content-center text-center pt-4 pb-5">
 			<div id="contact">
 				<p>
 					Looking for a motivated developer? Get in touch with me at
