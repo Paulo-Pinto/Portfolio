@@ -97,6 +97,25 @@
 				);
 			}
 
+			.gradient-custom2 {
+				/* fallback for old browsers */
+				background: #fbc2eb;
+
+				/* Chrome 10-25, Safari 5.1-6 */
+				background: -webkit-linear-gradient(
+					to bottom right,
+					rgba(248, 169, 226, 0.4),
+					rgba(148, 184, 247, 0.6)
+				);
+
+				/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+				background: linear-gradient(
+					to bottom right,
+					rgba(248, 169, 226, 0.4),
+					rgba(148, 184, 247, 0.6)
+				);
+			}
+
 			.bg-custom-white {
 				background: rgba(255, 255, 255, 0.151);
 			}
@@ -106,6 +125,45 @@
 
 			.flex-even {
 				flex: 1;
+			}
+
+			.parallax {
+				/* The image used */
+				background-image: url('img/cover.jpg');
+
+				/* Set a specific height */
+				min-height: 400px;
+
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.parallax2 {
+				/* The image used */
+				background-image: url('img/m6.png');
+
+				/* Set a specific height */
+				min-height: 100px;
+
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.parallax-flat {
+				/* Set a specific height */
+				min-height: 150px;
+
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
 			}
 		</style>
 	</head>
@@ -183,6 +241,8 @@
 			</div>
 		</div>
 
+		<div class="parallax-flat gradient-custom2"></div>
+
 		<!-- About -->
 		<div id="about" class="d-flex justify-content-center py-4">
 			<section class="w-75">
@@ -205,6 +265,8 @@
 				</div>
 			</section>
 		</div>
+
+		<div class="parallax2"></div>
 
 		<!-- TODO - test text-center -->
 		<!-- Projects -->
@@ -506,6 +568,7 @@
 				></a>
 			</div>
 		</div>
+		<div class="parallax"></div>
 
 		<!-- <div>Footer</div> -->
 	</body>
