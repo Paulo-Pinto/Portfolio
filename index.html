@@ -51,6 +51,9 @@
 					var target = getEventTarget(event);
 					target.className += ' custom-active';
 				};
+
+				// close header when clicked by small screen
+				$('#navbarNav').collapse('hide');
 			}
 
 			function toggleDropdown(n) {
@@ -109,7 +112,7 @@
 
 	<body data-bs-spy="scroll" data-bs-target="#navbar" class="gradient-custom">
 		<!-- TODO :
-		profile pic
+		profile pic / parallax outline
 		header needs style, close auto when paragraph is clicked on mobile
 		change scroll to paragraph to responsive (px -> em)
 
@@ -168,7 +171,7 @@
 
 		<!-- Me -->
 		<div class="d-flex justify-content-center py-4">
-			<div class="border border-2 border-warning rounded-3 w-75">
+			<div class="w-75">
 				<div>
 					<h1>Paulo Pinto (he/him)</h1>
 					<h3>
@@ -176,13 +179,13 @@
 						craft
 					</h3>
 				</div>
-				<img src="img/m6.png" class="w-25" />
+				<img src="img/face.jpg" class="w-25" />
 			</div>
 		</div>
 
 		<!-- About -->
-		<div class="d-flex justify-content-center py-4">
-			<section id="about" class="w-75">
+		<div id="about" class="d-flex justify-content-center py-4">
+			<section class="w-75">
 				<div>
 					<h1>👨‍💻 About Me</h1>
 					<!-- <p class="lead text-danger">Developer</p> -->
@@ -476,11 +479,11 @@
 			</div>
 		</div>
 
-		<h1 class="text-center pt-5 mb-0">📬 Contact me</h1>
+		<h1 id="contact" class="text-center pt-5 mb-0">📬 Contact me</h1>
 
 		<!-- Contact -->
 		<div class="d-flex justify-content-center text-center pt-4 pb-5">
-			<div id="contact">
+			<div>
 				<p>
 					Looking for a motivated developer? Get in touch with me at
 					<a id="email" href="mailto:paulopintodigital@gmail.com"
