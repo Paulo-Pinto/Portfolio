@@ -7,8 +7,15 @@
 			rel="icon"
 			href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/322/laptop_1f4bb.png"
 		/>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Paulo Pinto" />
+		<meta name="description" content="Paulo Pinto's personal website" />
+		<meta
+			name="keywords"
+			content="HTML, CSS, Bootstrap, JS, Portfolio, Paulo Pinto"
+		/>
 
 		<!-- get bootstrap -->
 		<link
@@ -32,7 +39,8 @@
 				var email = document.getElementById('email').text;
 				// add to clipboard
 				navigator.clipboard.writeText(email);
-				alert('email copied'); // TODO - add some effect
+				// show confirmation
+				$('#liveToast').toast('show');
 			}
 
 			function getEventTarget(e) {
@@ -147,16 +155,15 @@
 
 			.parallax2 {
 				/* The image used */
-				background-image: url('img/m6.png');
+				background-image: url('img/face.png');
 
 				/* Set a specific height */
-				min-height: 100px;
+				min-height: 400px;
 
 				/* Create the parallax scrolling effect */
 				background-attachment: fixed;
 				background-position: center;
 				background-repeat: no-repeat;
-				background-size: cover;
 			}
 
 			.parallax-flat {
@@ -169,10 +176,39 @@
 				background-repeat: no-repeat;
 				background-size: cover;
 			}
+
+			.bg-breathing {
+				animation: background-gradient 12s;
+				animation-iteration-count: infinite;
+				backface-visibility: hidden;
+				animation-timing-function: ease-in;
+
+				background: linear-gradient(
+					to bottom right,
+					rgba(248, 169, 226, 0.4),
+					rgba(148, 184, 247, 0.6)
+				);
+			}
+
+			@keyframes background-gradient {
+				0%,
+				100% {
+					background-color: rgba(248, 169, 226, 0.6);
+				}
+
+				25%,
+				75% {
+					background-color: #ffffff;
+				}
+
+				50% {
+					background-color: rgba(148, 184, 247, 0.6);
+				}
+			}
 		</style>
 	</head>
 
-	<body data-bs-spy="scroll" data-bs-target="#navbar" class="gradient-custom">
+	<body data-bs-spy="scroll" data-bs-target="#navbar" class="bg-breathing">
 		<!-- TODO :
 		profile pic / parallax outline
 		header needs style, close auto when paragraph is clicked on mobile
@@ -241,11 +277,12 @@
 						craft
 					</h3>
 				</div>
-				<img src="img/face.jpg" class="w-25" />
+				<img src="img/face.png" class="w-25" />
 			</div>
 		</div>
+		<!-- <div class="parallax2"></div> -->
 
-		<div class="parallax-flat gradient-custom2"></div>
+		<!-- <div class="parallax-flat gradient-custom2"></div> -->
 
 		<!-- About -->
 		<div id="about" class="d-flex justify-content-center py-4">
@@ -269,8 +306,6 @@
 				</div>
 			</section>
 		</div>
-
-		<div class="parallax2"></div>
 
 		<!-- TODO - test text-center -->
 		<!-- Projects -->
@@ -383,10 +418,10 @@
 							From May/19 to Jul/19, I was an intern at this
 							Hospital's IT team. The team taught me how to work
 							with the Hospital's equipment (fixing printers,
-							replacing externals), computer networks (attributing
-							IP addresses), user groups and policies. Working
-							with a lot of co-workers made me get a better grasp
-							at interpersonal relationships and general
+							replacing externals), computer networks (managing IP
+							routes), user groups and policies. Working with a
+							lot of co-workers made me get a better grasp at
+							interpersonal relationships and general
 							communication skills.
 						</p>
 
@@ -570,6 +605,29 @@
 				<a href="https://www.linkedin.com/in/paulo-pinto-259838182/"
 					>LINKedin<i class="fab linkedin"></i
 				></a>
+			</div>
+		</div>
+
+		<div class="position-fixed bottom-0 p-3" style="z-index: 11">
+			<div
+				id="liveToast"
+				class="toast"
+				role="alert"
+				aria-live="assertive"
+				aria-atomic="true"
+			>
+				<div class="toast-header">
+					<strong class="me-auto">Email copied!</strong>
+					<button
+						type="button"
+						class="btn-close"
+						data-bs-dismiss="toast"
+						aria-label="Close"
+					></button>
+				</div>
+				<div class="toast-body">
+					Hope to be hearing from you soon :)
+				</div>
 			</div>
 		</div>
 		<div class="parallax"></div>
