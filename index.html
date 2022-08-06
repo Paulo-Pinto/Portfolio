@@ -76,7 +76,7 @@
 		<style>
 			/* TODO - change to responsive */
 			* {
-				scroll-margin-top: 69px;
+				scroll-margin-top: 50px;
 			}
 
 			.active {
@@ -139,7 +139,7 @@
 				flex: 1;
 			}
 
-			.parallax {
+			.parallax-lake {
 				/* The image used */
 				background-image: url('img/cover.jpg');
 
@@ -169,6 +169,34 @@
 			.parallax-flat {
 				/* Set a specific height */
 				min-height: 150px;
+
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.parallax-ripple {
+				/* The image used */
+				background-image: url('img/waves.png');
+
+				/* Set a specific height */
+				min-height: 50px;
+
+				/* Create the parallax scrolling effect */
+				background-attachment: fixed;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+
+			.parallax-ripple2 {
+				/* The image used */
+				background-image: url('img/waves2.png');
+
+				/* Set a specific height */
+				min-height: 50px;
 
 				/* Create the parallax scrolling effect */
 				background-attachment: fixed;
@@ -280,9 +308,6 @@
 				<img src="img/face.png" class="w-25" />
 			</div>
 		</div>
-		<!-- <div class="parallax2"></div> -->
-
-		<!-- <div class="parallax-flat gradient-custom2"></div> -->
 
 		<!-- About -->
 		<div id="about" class="d-flex justify-content-center py-4">
@@ -306,6 +331,7 @@
 				</div>
 			</section>
 		</div>
+		<div class="parallax-ripple"></div>
 
 		<!-- TODO - test text-center -->
 		<!-- Projects -->
@@ -321,15 +347,32 @@
 					<div
 						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
 					>
-						<h4>☄ Project 1</h4>
+						<h4>☄ Citizens Rejecting Unemployment Duty</h4>
+						<p class="text-lead">Vue, Vite, Bootstrap</p>
+
 						<p class="text-justify">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis
-							nostrud exercitation ullamco laboris nisi ut aliquip
-							ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit
+							Created this CRUD app to learn how Vue.js + Vite
+							works. It connects to the randomuser API service to
+							generate random user info, and allows you to manage
+							a fake cast of candidates. It is simply styled using
+							one of my favourite web technologies, Bootstrap.
 						</p>
+
+						<div class="px-2">
+							<img
+								src="img/crud_gif.gif"
+								alt="Vue app gif"
+								class="img-fluid"
+							/>
+						</div>
+						<!-- <div
+							class="github-card"
+							data-github="Paulo-Pinto/Citizens-Rejecting-Unemployment-Duty"
+							data-width="400"
+							data-height="154"
+							data-theme="default"
+						></div>
+						<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script> -->
 
 						<p class="text-center">
 							<button
@@ -347,16 +390,31 @@
 					<div
 						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
 					>
-						<h4>🎆 Project 2</h4>
+						<h4>🎆 A* Visualization</h4>
+						<p class="text-lead">Python</p>
 						<p class="text-justify">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis
-							nostrud exercitation ullamco laboris nisi ut aliquip
-							ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit
+							This project implements the A* algorithm to
+							diagonally path-find a square map with different
+							terrain restrictions. One of the best parts of this
+							project was curating the visualization and creating
+							a gif of the solve at the end.
 						</p>
-
+						<div class="px-2">
+							<img
+								src="img/crud_gif.gif"
+								alt="Vue app gif"
+								class="img-fluid"
+							/>
+						</div>
+						<!-- <div
+							class="github-card"
+							data-github="Paulo-Pinto/Citizens-Rejecting-Unemployment-Duty"
+							data-width="400"
+							data-height="154"
+							data-theme="default"
+						></div>
+						<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script> -->
+						<!-- 
 						<p class="text-center">
 							<button
 								onclick="toggleDropdown(2)"
@@ -367,7 +425,7 @@
 							</button>
 						</p>
 
-						<div id="info2" class="d-none">INFO 2</div>
+						<div id="info2" class="d-none">INFO 2</div> -->
 					</div>
 
 					<div
@@ -382,7 +440,13 @@
 							ex ea commodo consequat. Duis aute irure dolor in
 							reprehenderit
 						</p>
-
+						<div class="px-2">
+							<img
+								src="img/crud_gif.gif"
+								alt="Vue app gif"
+								class="img-fluid"
+							/>
+						</div>
 						<p class="text-center">
 							<button
 								onclick="toggleDropdown(3)"
@@ -630,7 +694,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="parallax"></div>
+		<div class="parallax-lake"></div>
 
 		<!-- <div>Footer</div> -->
 	</body>
