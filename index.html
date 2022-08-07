@@ -159,7 +159,7 @@
 
 			.parallax2 {
 				/* The image used */
-				background-image: url('img/face.png');
+				background-image: url('img/face_outline.png');
 
 				/* Set a specific height */
 				min-height: 400px;
@@ -184,6 +184,7 @@
 			.parallax-ripple {
 				/* The image used */
 				background-image: url('img/waves.png');
+				/* background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='29' height='50.115' patternTransform='scale(3) rotate(40)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 0%, 0)'/><path d='M14.498 16.858L0 8.488.002-8.257l14.5-8.374L29-8.26l-.002 16.745zm0 50.06L0 58.548l.002-16.745 14.5-8.373L29 41.8l-.002 16.744zM28.996 41.8l-14.498-8.37.002-16.744L29 8.312l14.498 8.37-.002 16.745zm-29 0l-14.498-8.37.002-16.744L0 8.312l14.498 8.37-.002 16.745z'  stroke-width='10' stroke='hsla(259, 59%, 59%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(-45,0)' fill='url(%23a)'/></svg>"); */
 
 				/* Set a specific height */
 				min-height: 50px;
@@ -224,6 +225,15 @@
 
 			.bold {
 				font-weight: 700;
+			}
+
+			.text-animated {
+				background-image: url(https://i.giphy.com/media/eJoZAwRN9OI5QjthIE/200w.gif);
+				background-size: repeat;
+				color: rgba(0, 0, 0, 0.26);
+				background-clip: text;
+				-moz-background-clip: text;
+				-webkit-background-clip: text;
 			}
 
 			@keyframes background-gradient {
@@ -308,13 +318,16 @@
 		<div class="d-flex justify-content-center py-4">
 			<div class="w-75">
 				<div>
-					<h1>Paulo Pinto (he/him) 21</h1>
+					<h1 class="display-1 text-animated">
+						Paulo Pinto, 21yo, he/him
+					</h1>
+
 					<h3>
 						A Developer looking for new opportunities to perfect his
 						craft
 					</h3>
 				</div>
-				<img src="img/face.png" class="w-25" />
+				<img src="img/face_outline.png" class="w-25" />
 			</div>
 		</div>
 
@@ -322,8 +335,8 @@
 		<div id="about" class="d-flex justify-content-center py-4">
 			<section class="w-75">
 				<div>
-					<h1>👨‍💻 About Me</h1>
-					<!-- <p class="lead text-danger">Developer</p> -->
+					<!-- TODO - text align right -->
+					<h1 class="text-right">👨‍💻 About Me</h1>
 					<p>
 						Born and raised in Portugal, I am a software developer
 						<u>looking for new opportunities abroad</u> to further
@@ -354,9 +367,9 @@
 
 				<div class="d-flex">
 					<div
-						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
 					>
-						<h4>☄green Citizens Rejecting Unemployment Duty</h4>
+						<h4>✌️ Citizens Rejecting Unemployment Duty</h4>
 						<p class="text-lead bold">Vue, Vite, Bootstrap</p>
 
 						<p class="text-justify">
@@ -390,13 +403,13 @@
 					</div>
 
 					<div
-						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
 					>
-						<h4>🎆 A* Visualization</h4>
+						<h4>🐍 A* Visualization</h4>
 						<p class="text-lead bold">Python, A*</p>
 						<p class="text-justify">
-							This project implements the A* algorithm to
-							diagonally path-find a square map with different
+							This project implements the A* algorithm to find the
+							best path through a square map with different
 							terrain restrictions. One of the best parts of this
 							project was curating the visualization and creating
 							a gif of the solve at the end.
@@ -424,36 +437,35 @@
 					</div>
 
 					<div
-						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white"
+						class="p-2 mx-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
 					>
-						<h4>🐍 🚣‍♀River Crossing Puzzle</h4>
+						<h4>🚣‍♀ River Crossing Puzzle</h4>
 						<p class="text-lead bold">Python, BFS, DFS</p>
 						<p class="text-justify">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam, quis
-							nostrud exercitation ullamco laboris nisi ut aliquip
-							ex ea commodo consequat. Duis aute irure dolor in
-							reprehenderit
+							Python program designed to show the differences
+							between Breadth-First and Depth-First Search
+							algorithms (BFS/DFS) when applied to the river
+							crossing puzzle. to find all possible solutions.
 						</p>
 						<div class="px-2">
 							<img
-								src="img/crud.gif"
+								src="img/river_crossing.gif"
 								alt="Vue app gif"
 								class="img-fluid"
 							/>
 						</div>
 						<p class="text-center">
-							<button
-								onclick="toggleDropdown(3)"
-								type="button"
-								class="btn btn-info"
+							<a
+								href="https://github.com/Paulo-Pinto/RiverCrossingPuzzle"
+								class="btn btn-primary btn-lg mt-4"
+								role="button"
+								aria-disabled="true"
+								target="”_blank”"
 							>
-								+ info
-							</button>
+								<i class="bi bi-arrow-up-right"></i>
+								Github
+							</a>
 						</p>
-
-						<div id="info3" class="d-none">INFO 3</div>
 					</div>
 				</div>
 			</div>
