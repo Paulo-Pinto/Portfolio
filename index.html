@@ -78,7 +78,6 @@
 		</script>
 
 		<style>
-			/* TODO - change to responsive */
 			* {
 				scroll-margin-top: 50px;
 			}
@@ -195,7 +194,6 @@
 				background-repeat: no-repeat;
 				background-size: cover;
 			}
-			/* TODO - Extract parallax commons */
 			.parallax-ripple2 {
 				/* The image used */
 				background-image: url('img/waves2.png');
@@ -255,25 +253,11 @@
 	</head>
 
 	<body data-bs-spy="scroll" data-bs-target="#navbar" class="bg-breathing">
-		<!-- TODO :
-		profile pic / parallax outline
-		header needs style, close auto when paragraph is clicked on mobile
-		change scroll to paragraph to responsive (px -> em)
-
-		orientação vertical para cards em mobile
-
-		add linkedin icon (fix fontawesome) / footer
-		add CV
-		background with 3js
-		add roboto-mono font
-		Dark-mode
-		-->
 		<!-- header -->
 		<nav id="navbar" class="navbar navbar-expand-md bg-light sticky-top">
 			<div class="container-fluid">
 				<a class="navbar-brand text-primary">Paulo Pinto - Developer</a>
 				<!-- toggle -->
-				<!-- TODO : Close this toggle when clicked on mobile -->
 				<button
 					class="navbar-toggler"
 					type="button"
@@ -335,7 +319,6 @@
 		<div id="about" class="d-flex justify-content-center py-4">
 			<section class="w-75">
 				<div>
-					<!-- TODO - text align right -->
 					<h1 class="text-right">👨‍💻 About Me</h1>
 					<p>
 						Born and raised in Portugal, I am a software developer
@@ -355,7 +338,6 @@
 		</div>
 		<div class="parallax-ripple"></div>
 
-		<!-- TODO - test text-center -->
 		<!-- Projects -->
 		<div id="projects" class="d-flex justify-content-center py-4">
 			<div class="w-75">
@@ -507,7 +489,7 @@
 							</button>
 						</p>
 
-						<div id="info4" class="d-none">INFO 4</div>
+						<div id="info4" class="d-none"></div>
 					</div>
 
 					<div
@@ -535,7 +517,7 @@
 							</button>
 						</p>
 
-						<div id="info5" class="d-none">INFO 5</div>
+						<div id="info5" class="d-none"></div>
 					</div>
 
 					<div
@@ -554,7 +536,6 @@
 							Service for the first time, making this a big
 							learning experience.
 						</p>
-						<!-- TODO passar estes pontos para o info ? -->
 						<p class="text-center">
 							<button
 								onclick="toggleDropdown(6)"
@@ -667,7 +648,6 @@
 							>
 								+ info
 							</button>
-							<!-- TODO add svg icon here -->
 						</p>
 
 						<div id="info8" class="d-none">
@@ -705,7 +685,6 @@
 					</button>
 				</p>
 
-				<!-- TODO : supposedly fontawesome comes with bootstrap. investigate -->
 				<a
 					href="https://www.linkedin.com/in/paulo-pinto-digital/"
 					class="btn btn-primary btn-lg mt-4"
