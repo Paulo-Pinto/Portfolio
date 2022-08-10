@@ -1,0 +1,90 @@
+* {
+	scroll-margin-top: 3.125rem;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.active {
+	font-weight: 600;
+	color: #4285f4;
+	text-decoration: #8ddfee70 wavy underline;
+}
+
+.text-justify {
+	text-align: justify;
+}
+
+.flex-even {
+	flex: 1;
+}
+
+.inline-b {
+	display: inline-block;
+}
+
+.bg-custom-white {
+	background: rgba(255, 255, 255, 0.151);
+}
+.bg-custom-black {
+	background: rgba(0, 0, 0, 0.185);
+}
+
+.parallax {
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.parallax-lake {
+	background-image: url('img/cover.jpg');
+	min-height: 400px;
+}
+
+.parallax-ripple {
+	/* background-image: url('img/waves2.png'); */
+	background-image: url('img/waves.png');
+	min-height: 50px;
+}
+
+/* https://mdbootstrap.com/docs/standard/tools/design/gradients/ */
+.bg-breathing {
+	animation: background-gradient 12s;
+	animation-iteration-count: infinite;
+	backface-visibility: hidden;
+	animation-timing-function: ease-in;
+
+	background: linear-gradient(
+		to bottom right,
+		rgba(248, 169, 226, 0.4),
+		rgba(148, 184, 247, 0.6)
+	);
+}
+
+.text-animated {
+	background-image: url(https://i.giphy.com/media/eJoZAwRN9OI5QjthIE/200w.gif);
+	background-size: repeat;
+	color: rgba(0, 0, 0, 0.26);
+	background-clip: text;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+}
+
+@keyframes background-gradient {
+	0%,
+	100% {
+		background-color: rgba(248, 169, 226, 0.6);
+	}
+
+	25%,
+	75% {
+		background-color: #ffffff;
+	}
+
+	50% {
+		background-color: rgba(148, 184, 247, 0.6);
+	}
+}
