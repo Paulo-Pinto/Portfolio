@@ -2,12 +2,6 @@
 <html lang="en">
 	<head>
 		<title>Paulo Pinto - Developer</title>
-
-		<link
-			rel="icon"
-			href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/322/laptop_1f4bb.png"
-		/>
-
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="Paulo Pinto" />
@@ -17,7 +11,12 @@
 			content="HTML, CSS, Bootstrap, JS, Portfolio, Paulo Pinto"
 		/>
 
-		<!-- get bootstrap -->
+		<link
+			rel="icon"
+			href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/twitter/322/laptop_1f4bb.png"
+		/>
+
+		<!-- bootstrap -->
 		<link
 			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
 			rel="stylesheet"
@@ -34,6 +33,7 @@
 			rel="stylesheet"
 			href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
 		/>
+
 		<!-- jQuery -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -90,103 +90,11 @@
 				}
 			}
 		</script>
-
-		<style>
-			* {
-				scroll-margin-top: 50px;
-			}
-
-			.bold {
-				font-weight: 700;
-			}
-
-			.active {
-				font-weight: 600;
-				color: #4285f4;
-				text-decoration: #8ddfee70 wavy underline;
-			}
-
-			.text-justify {
-				text-align: justify;
-			}
-
-			.flex-even {
-				flex: 1;
-			}
-
-			.inline-b {
-				display: inline-block;
-			}
-
-			.bg-custom-white {
-				background: rgba(255, 255, 255, 0.151);
-			}
-			.bg-custom-black {
-				background: rgba(0, 0, 0, 0.185);
-			}
-
-			.parallax {
-				/* Create the parallax scrolling effect */
-				background-attachment: fixed;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: cover;
-			}
-
-			.parallax-lake {
-				background-image: url('img/cover.jpg');
-				min-height: 400px;
-			}
-
-			.parallax-ripple {
-				/* background-image: url('img/waves2.png'); */
-				background-image: url('img/waves.png');
-				min-height: 50px;
-			}
-
-			/* https://mdbootstrap.com/docs/standard/tools/design/gradients/ */
-			.bg-breathing {
-				animation: background-gradient 12s;
-				animation-iteration-count: infinite;
-				backface-visibility: hidden;
-				animation-timing-function: ease-in;
-
-				background: linear-gradient(
-					to bottom right,
-					rgba(248, 169, 226, 0.4),
-					rgba(148, 184, 247, 0.6)
-				);
-			}
-
-			.text-animated {
-				background-image: url(https://i.giphy.com/media/eJoZAwRN9OI5QjthIE/200w.gif);
-				background-size: repeat;
-				color: rgba(0, 0, 0, 0.26);
-				background-clip: text;
-				-moz-background-clip: text;
-				-webkit-background-clip: text;
-			}
-
-			@keyframes background-gradient {
-				0%,
-				100% {
-					background-color: rgba(248, 169, 226, 0.6);
-				}
-
-				25%,
-				75% {
-					background-color: #ffffff;
-				}
-
-				50% {
-					background-color: rgba(148, 184, 247, 0.6);
-				}
-			}
-		</style>
+		<link rel="stylesheet" href="style.css" />
 	</head>
 
 	<body data-bs-spy="scroll" data-bs-target="#navbar" class="bg-breathing">
-		<!-- header -->
+		<!-- Header -->
 		<nav id="navbar" class="navbar navbar-expand-md bg-light sticky-top">
 			<div class="container-fluid">
 				<a class="navbar-brand text-primary">Paulo Pinto - Developer</a>
@@ -271,232 +179,6 @@
 		</div>
 		<div class="parallax parallax-ripple"></div>
 
-		<!-- Projects -->
-		<div id="projects" class="d-flex justify-content-center py-4">
-			<div class="w-75">
-				<h1>💾 Projects</h1>
-				<p class="lead">
-					I'm proud of these projects, they were extremely valuable to
-					flourish my learning mindset
-				</p>
-
-				<div class="d-flex flex-md-row flex-column">
-					<div
-						class="p-2 mx-2 mb-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
-					>
-						<h4>✌️ Citizens Rejecting Unemployment Duty</h4>
-						<p class="text-lead bold">Vue, Vite, Bootstrap</p>
-
-						<p class="text-justify">
-							Created this CRUD app to learn how Vue.js + Vite
-							works. It connects to the randomuser API service to
-							generate random user info, and allows you to manage
-							a fake cast of candidates. It is simply styled using
-							one of my favourite web technologies, Bootstrap.
-						</p>
-
-						<div class="px-2">
-							<img
-								src="img/crud.gif"
-								alt="Vue app gif"
-								class="img-fluid"
-							/>
-						</div>
-
-						<p class="text-center">
-							<a
-								href="https://github.com/Paulo-Pinto/Citizens-Rejecting-Unemployment-Duty"
-								class="btn btn-primary btn-lg mt-4"
-								role="button"
-								aria-disabled="true"
-								target="”_blank”"
-							>
-								<i class="bi bi-arrow-up-right"></i>
-								Github
-							</a>
-						</p>
-					</div>
-
-					<div
-						class="p-2 mx-2 mb-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
-					>
-						<h4>🐍 A* Visualization</h4>
-						<p class="text-lead bold">Python, A*</p>
-						<p class="text-justify">
-							This project implements the A* algorithm to find the
-							best path through a square map with different
-							terrain restrictions. One of the best parts of this
-							project was curating the visualization and creating
-							a gif of the solve at the end.
-						</p>
-						<div class="px-2">
-							<img
-								src="img/astar.gif"
-								alt="Vue app gif"
-								class="img-fluid"
-							/>
-						</div>
-
-						<p class="text-center">
-							<a
-								href="https://github.com/Paulo-Pinto/AI_Project_AStar"
-								class="btn btn-primary btn-lg mt-4"
-								role="button"
-								aria-disabled="true"
-								target="”_blank”"
-							>
-								<i class="bi bi-arrow-up-right"></i>
-								Github
-							</a>
-						</p>
-					</div>
-
-					<div
-						class="p-2 mx-2 mb-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
-					>
-						<h4>🚣‍♀ River Crossing Puzzle</h4>
-						<p class="text-lead bold">Python, BFS, DFS</p>
-						<p class="text-justify">
-							Python program designed to show the differences
-							between Breadth-First and Depth-First Search
-							algorithms (BFS/DFS) when applied to the river
-							crossing puzzle. to find all possible solutions.
-						</p>
-						<div class="px-2">
-							<img
-								src="img/river_crossing.gif"
-								alt="Vue app gif"
-								class="img-fluid"
-							/>
-						</div>
-						<p class="text-center">
-							<a
-								href="https://github.com/Paulo-Pinto/RiverCrossingPuzzle"
-								class="btn btn-primary btn-lg mt-4"
-								role="button"
-								aria-disabled="true"
-								target="”_blank”"
-							>
-								<i class="bi bi-arrow-up-right"></i>
-								Github
-							</a>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Experience -->
-		<div id="experience" class="d-flex justify-content-center py-4">
-			<div class="w-75">
-				<h1>🎐 Experience</h1>
-				<p class="lead">
-					I have participated in three internships during my academic
-					endeavours
-				</p>
-
-				<div class="d-flex flex-md-row flex-column">
-					<div
-						class="p-2 mx-2 mb-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
-					>
-						<h4>👩‍⚕️ Hospital Garcia de Orta</h4>
-						<p class="text-lead"><b>Helpdesk</b> - 3 months</p>
-						<p class="text-justify">
-							From May/19 to Jul/19, I was an intern at this
-							Hospital's IT team. The team taught me how to work
-							with the Hospital's equipment (fixing printers,
-							replacing externals), computer networks (managing IP
-							routes), user groups and policies. Working with a
-							lot of co-workers made me get a better grasp at
-							interpersonal relationships and general
-							communication skills.
-						</p>
-
-						<p class="text-center">
-							<button
-								onclick="toggleDropdown(4)"
-								type="button"
-								class="btn btn-info"
-								id="toggler4"
-							>
-								<i class="bi bi-chevron-double-down"></i>
-							</button>
-						</p>
-
-						<div id="info4" class="d-none">aboubakar</div>
-					</div>
-
-					<div
-						class="p-2 mx-2 mb-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
-					>
-						<h4>☘ Mobility Genie</h4>
-						<p class="text-lead"><b>Web Developer</b> - 1 month</p>
-						<p class="text-justify">
-							From Apr/19 to May/19, I had the opportunity to take
-							part in the Erasmus+ programme and complete a
-							one-month internship in Tralee, Ireland. In this
-							internship I developed a Web App using
-							<b>jQuery</b> to display, sort and filter data from
-							a pre-existing dataset. I hosted this app on Heroku,
-							using <b>express.js</b>.
-						</p>
-
-						<p class="text-center">
-							<button
-								onclick="toggleDropdown(5)"
-								type="button"
-								class="btn btn-info"
-								id="toggler5"
-							>
-								<i class="bi bi-chevron-double-down"></i>
-							</button>
-						</p>
-
-						<div id="info5" class="d-none"></div>
-					</div>
-
-					<div
-						class="p-2 mx-2 mb-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
-					>
-						<h4>📺 Chipstorm</h4>
-						<p class="text-lead">
-							<b>Computer Technician / Web Developer</b> - 2
-							months
-						</p>
-
-						<p class="text-justify">
-							From Jan/18 to Feb/18, I aided in computer repair
-							services in Chipstorm while developing a rudimentary
-							log-in web app. I also got to experience Costumer
-							Service for the first time, making this a big
-							learning experience.
-						</p>
-						<p class="text-center">
-							<button
-								onclick="toggleDropdown(6)"
-								type="button"
-								class="btn btn-info"
-								id="toggler6"
-							>
-								<i class="bi bi-chevron-double-down"></i>
-							</button>
-						</p>
-
-						<div id="info6" class="d-none">
-							<ul>
-								<li>Work Order Management</li>
-								<li>Costumer Service</li>
-								<li>Installing Software</li>
-								<li>Replacing Damaged components</li>
-								<li>Performing Diagnostics and Repair</li>
-								<li>Formatting Computers</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<!-- Education -->
 		<div id="education" class="d-flex justify-content-center py-4">
 			<div class="w-75">
@@ -506,14 +188,12 @@
 					domain
 				</p>
 
-				<div class="d-flex flex-md-row flex-column">
+				<div class="d-flex flex-lg-row flex-column">
 					<!-- mb-auto -->
 					<div
-						class="p-2 mx-2 mb-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
+						class="p-2 mx-2 mb-auto border border-2 border-secondary rounded-1 bg-custom-white flex-even"
 					>
-						<h4>
-							👨‍🔬 Computing Engineering Bachelor's Degree - EQF 6
-						</h4>
+						<h3>👨‍🔬 Computing Engineering Degree - EQF 6</h3>
 						<!-- https://www.ulusofona.pt/en/undergraduate/computing-engineering -->
 						<p class="text-lead">ULHT in Lisboa - 19/22</p>
 						<p class="text-justify">
@@ -556,12 +236,12 @@
 					</div>
 
 					<div
-						class="p-2 mx-2 mb-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
+						class="p-2 mx-2 mb-auto border border-2 border-secondary rounded-1 bg-custom-white flex-even"
 					>
-						<h4>
+						<h3>
 							👨‍🏭 Information Systems Programming and Management
 							Technician - EQF 4
-						</h4>
+						</h3>
 						<p class="text-lead">
 							Escola Digital in Lisboa - 16/19
 						</p>
@@ -599,6 +279,250 @@
 								<li>General Computer Maintenance</li>
 							</ul>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Experience -->
+		<div id="experience" class="d-flex justify-content-center py-4">
+			<div class="w-75">
+				<h1>🎐 Experience</h1>
+				<p class="lead">
+					I have participated in three internships during my academic
+					endeavours
+				</p>
+
+				<div class="d-flex flex-lg-row flex-column">
+					<div
+						class="p-2 mx-2 mb-auto border border-2 border-secondary rounded-1 bg-custom-white flex-even"
+					>
+						<h3>👩‍⚕️ Helpdesk</h3>
+						<p class="text-lead">
+							<b>Hospital Garcia de Orta</b> - 3 months
+						</p>
+						<p class="text-justify">
+							From May/19 to Jul/19, I was an intern at this
+							Hospital's IT team. The team taught me how to work
+							with the Hospital's equipment (<b
+								>fixing/replacing externals</b
+							>
+							like printers), computer networks (managing IP
+							routes), user groups and policies. Working with a
+							lot of co-workers made me get a better grasp at
+							<b>interpersonal relationships</b> and general
+							communication skills.
+						</p>
+
+						<p class="text-center">
+							<button
+								onclick="toggleDropdown(4)"
+								type="button"
+								class="btn btn-info"
+								id="toggler4"
+							>
+								<i class="bi bi-chevron-double-down"></i>
+							</button>
+						</p>
+
+						<div id="info4" class="d-none">
+							<ul>
+								<li>Technical Support</li>
+								<li>VDI Software Maintenance</li>
+								<li>TCP/IP Connections Management</li>
+
+								<li>
+									Work Groups and Permissions Configuration
+								</li>
+								<li>Computer Externals Maintenance</li>
+								<li>OS Management</li>
+							</ul>
+						</div>
+					</div>
+
+					<div
+						class="p-2 mx-2 mb-auto border border-2 border-secondary rounded-1 bg-custom-white flex-even"
+					>
+						<h3>☘ Web Developer</h3>
+						<p class="text-lead"><b>Mobility Genie</b> - 1 month</p>
+						<p class="text-justify">
+							From Apr/19 to May/19, I had the opportunity to take
+							part in the Erasmus+ programme and complete a
+							one-month internship in Tralee, Ireland. In this
+							internship I developed a Web App using
+							<b>jQuery</b> to display, sort and filter data from
+							a pre-existing dataset. I hosted this app on Heroku,
+							using <b>express.js</b>.
+						</p>
+
+						<p class="text-center">
+							<button
+								onclick="toggleDropdown(5)"
+								type="button"
+								class="btn btn-info"
+								id="toggler5"
+							>
+								<i class="bi bi-chevron-double-down"></i>
+							</button>
+						</p>
+
+						<div id="info5" class="d-none">
+							<ul>
+								<li>Web Development - jQuery</li>
+								<li>Hosting - express.js / Heroku</li>
+								<li>Experimented with APIs</li>
+							</ul>
+						</div>
+					</div>
+
+					<div
+						class="p-2 mx-2 mb-auto border border-2 border-secondary rounded-1 bg-custom-white flex-even"
+					>
+						<h3>📺 Computer Technician / Web Developer</h3>
+						<p class="text-lead"><b>Chipstorm</b> - 2 months</p>
+
+						<p class="text-justify">
+							From Jan/18 to Feb/18, I aided in computer repair
+							services in Chipstorm while developing a rudimentary
+							log-in web app. I also got to experience Costumer
+							Service for the first time, making this a big
+							learning experience.
+						</p>
+						<p class="text-center">
+							<button
+								onclick="toggleDropdown(6)"
+								type="button"
+								class="btn btn-info"
+								id="toggler6"
+							>
+								<i class="bi bi-chevron-double-down"></i>
+							</button>
+						</p>
+
+						<div id="info6" class="d-none">
+							<ul>
+								<li>Computer Diagnostic and Repair</li>
+								<li>Replacing Damaged components</li>
+								<li>Installing Software</li>
+								<li>Work Order Management</li>
+								<li>Costumer Service</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Projects -->
+		<div id="projects" class="d-flex justify-content-center py-4">
+			<div class="w-75">
+				<h1>💾 Projects</h1>
+				<p class="lead">
+					I'm proud of these projects, they were extremely valuable to
+					flourish my learning mindset
+				</p>
+
+				<div class="d-flex flex-lg-row flex-column">
+					<div
+						class="p-2 mx-2 mb-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
+					>
+						<h3>✌️ Citizens Rejecting Unemployment Duty</h3>
+						<p class="text-lead bold">Vue, Vite, Bootstrap</p>
+
+						<p class="text-justify">
+							Created this CRUD app to learn how Vue.js + Vite
+							works. It connects to the randomuser API service to
+							generate random user info, and allows you to manage
+							a fake cast of candidates. It is simply styled using
+							one of my favourite web technologies, Bootstrap.
+						</p>
+
+						<div class="px-2">
+							<img
+								src="img/crud.gif"
+								alt="Vue app gif"
+								class="img-fluid mx-auto d-block"
+							/>
+						</div>
+
+						<p class="text-center">
+							<a
+								href="https://github.com/Paulo-Pinto/Citizens-Rejecting-Unemployment-Duty"
+								class="btn btn-primary btn-lg mt-4"
+								role="button"
+								aria-disabled="true"
+								target="”_blank”"
+							>
+								<i class="bi bi-arrow-up-right"></i>
+								Github
+							</a>
+						</p>
+					</div>
+
+					<div
+						class="p-2 mx-2 mb-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
+					>
+						<h3>🐍 A* Visualization</h3>
+						<p class="text-lead bold">Python, A*</p>
+						<p class="text-justify">
+							This project implements the A* algorithm to find the
+							best path through a square map with different
+							terrain restrictions. One of the best parts of this
+							project was curating the visualization and creating
+							a gif of the solve at the end.
+						</p>
+						<div class="px-2">
+							<img
+								src="img/astar.gif"
+								alt="Vue app gif"
+								class="img-fluid mx-auto d-block"
+							/>
+						</div>
+
+						<p class="text-center">
+							<a
+								href="https://github.com/Paulo-Pinto/AI_Project_AStar"
+								class="btn btn-primary btn-lg mt-4"
+								role="button"
+								aria-disabled="true"
+								target="”_blank”"
+							>
+								<i class="bi bi-arrow-up-right"></i>
+								Github
+							</a>
+						</p>
+					</div>
+
+					<div
+						class="p-2 mx-2 mb-2 border border-2 border-secondary rounded-1 bg-custom-white flex-even"
+					>
+						<h3>🚣‍♀ River Crossing Puzzle</h3>
+						<p class="text-lead bold">Python, BFS, DFS</p>
+						<p class="text-justify">
+							Python program designed to show the differences
+							between Breadth-First and Depth-First Search
+							algorithms (BFS/DFS) when applied to the river
+							crossing puzzle. to find all possible solutions.
+						</p>
+						<div class="px-2">
+							<img
+								src="img/river_crossing.gif"
+								alt="Vue app gif"
+								class="img-fluid mx-auto d-block"
+							/>
+						</div>
+						<p class="text-center">
+							<a
+								href="https://github.com/Paulo-Pinto/RiverCrossingPuzzle"
+								class="btn btn-primary btn-lg mt-4"
+								role="button"
+								aria-disabled="true"
+								target="”_blank”"
+							>
+								<i class="bi bi-arrow-up-right"></i>
+								Github
+							</a>
+						</p>
 					</div>
 				</div>
 			</div>
