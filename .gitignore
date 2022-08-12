@@ -4,3 +4,6 @@ notes.txt
 img/face.jpg
 img/face.png
 img/*.psd
+
+cv/*.json
+cv/*.zip
