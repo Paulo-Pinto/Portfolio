@@ -72,22 +72,15 @@
 				$('#navbarNav').collapse('hide');
 			}
 
+			// alternates dropdown icons on cards, n is the card's id
 			function toggleDropdown(n) {
 				$('#info' + n).toggleClass('d-none');
 
-				// alternates btn two icons, can be simplified
-				if (
-					$('#toggler' + n).html() ==
-					'<i class="bi bi-chevron-double-up"></i>'
-				) {
-					$('#toggler' + n).html(
-						'<i class="bi bi-chevron-double-down"></i>'
-					);
-				} else {
-					$('#toggler' + n).html(
-						'<i class="bi bi-chevron-double-up"></i>'
-					);
-				}
+				var up = '<i class="bi bi-chevron-double-up"></i>';
+				var down = '<i class="bi bi-chevron-double-down"></i>';
+				$('#toggler' + n).html(
+					$('#toggler' + n).html() == up ? down : up
+				);
 			}
 		</script>
 		<link rel="stylesheet" href="style.css" />
@@ -617,7 +610,5 @@
 			</div>
 		</div>
 		<div class="parallax parallax-lake"></div>
-
-		<!-- <div>Footer</div> -->
 	</body>
 </html>
