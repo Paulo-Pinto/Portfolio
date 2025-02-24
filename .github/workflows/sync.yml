@@ -21,7 +21,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-files: '/'
+          source-files: '.'
           destination-username: 'Paulo-Pinto'
           destination-repository: 'Paulo-Pinto.github.io'
           destination-branch: 'main'
