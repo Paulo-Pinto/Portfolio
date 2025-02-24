@@ -24,6 +24,7 @@ jobs:
           source-files: '/'
           destination-username: 'Paulo-Pinto'
           destination-repository: 'Paulo-Pinto.github.io'
+          destination-branch: 'main'
           commit-username: 'Paulo-Pinto'
           commit-email: 'paulopintodigital@gmail.com'
           commit-message: "Feat: Syncing from Portfolio repo through GH Actions"
