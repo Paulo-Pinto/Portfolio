@@ -1,0 +1,30 @@
+on:
+  push:
+    branches:
+    - master
+    - main
+  workflow_dispatch:
+    inputs:
+      logLevel:
+        description: 'Log level'
+        required: true
+        default: 'warning'
+      tags:
+        description: 'Manually sync to github.io repo'
+
+jobs:
+  sync_to_github_pages_repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copy files to another repository
+        uses: nkoppel/push-files-to-another-repository@master
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-files: '/'
+          destination-username: 'Paulo-Pinto'
+          destination-repository: 'Paulo-Pinto.github.io'
+          commit-username: 'Paulo-Pinto'
+          commit-email: 'paulopintodigital@gmail.com'
+          commit-message: "Feat: Syncing from Portfolio repo through GH Actions"
+                  
